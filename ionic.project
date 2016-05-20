@@ -1,0 +1,10 @@
+{
+  "name": "frontend",
+  "app_id": ""
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://veganize-kkteste.rhcloud.com/api"
+    }
+  ]
+}
