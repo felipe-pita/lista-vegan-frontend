@@ -19,4 +19,5 @@ O único caso de uso feito foi o "Ver Categorias", está faltando todo o restant
 
 # APK
 Note que o aplicativo não está funcional.
+
 <a href="https://github.com/rafaelnsantos/lista-vegan-frontend/raw/master/apk/android-debug.apk">Clique aqui</a> para baixar o apk.
