@@ -1,0 +1,1 @@
+# lista-vegan-frontend
