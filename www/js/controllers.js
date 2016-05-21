@@ -10,14 +10,22 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ProdutoCtrl', function($scope, $stateParams, Produtos){
-  Produtos.get($stateParams.categoriaId).then(function(produtos){
+  Produtos.all($stateParams.categoriaId).then(function(produtos){
     $scope.produtos = produtos.data;
   });
+  
+  Produtos.get($stateParams.categoriaId).then(function(categoria) {
+    $scope.categoriaSelecionada = categoria.data;
+  });
+  
 })
 
 .controller('MarcaCtrl', function($scope, $stateParams, Marcas){
-  Marcas.get($stateParams.produtoId).then(function(marcas){
+  Marcas.all($stateParams.produtoId).then(function(marcas){
     $scope.marcas = marcas.data;
+  });
+  Marcas.get($stateParams.produtoId).then(function(produto) {
+    $scope.produtoSelecionado = produto.data;
   });
 })
 // mantido para referência posterior

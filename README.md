@@ -39,7 +39,6 @@ Informações do produto 5.
 
 # Faltando
 - Melhorar UI
-- Popular banco de dados
 - Nome
 - Icone
 
