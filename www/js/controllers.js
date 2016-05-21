@@ -12,7 +12,7 @@ angular.module('starter.controllers', [])
     $scope.produtos = produtos.data;
   });
   
-  Produtos.get($stateParams.categoriaId).then(function(categoria) {
+  Produtos.getCategoria($stateParams.categoriaId).then(function(categoria) {
     $scope.categoriaSelecionada = categoria.data;
   });
   
@@ -23,7 +23,7 @@ angular.module('starter.controllers', [])
     $scope.marcas = marcas.data;
   });
   
-  Marcas.get($stateParams.produtoId).then(function(produto) {
+  Marcas.getProduto($stateParams.produtoId).then(function(produto) {
     $scope.produtoSelecionado = produto.data;
   });
   

@@ -15,7 +15,7 @@ angular.module('starter.services', [])
     all: function(categoriaId) {
       return $http.get('http://veganize-kkteste.rhcloud.com/categoria/' + categoriaId +'/?format=json');
     },
-    get: function(categoriaId) {
+    getCategoria: function(categoriaId) {
       return $http.get('http://veganize-kkteste.rhcloud.com/api/categoria/' + categoriaId +'?format=json');
     }
   }
@@ -26,7 +26,7 @@ angular.module('starter.services', [])
     all: function(produtoId) {
       return $http.get('http://veganize-kkteste.rhcloud.com/produto/' + produtoId +'/?format=json');
     },
-    get: function(produtoId) {
+    getProduto: function(produtoId) {
       return $http.get('http://veganize-kkteste.rhcloud.com/api/produto/' + produtoId +'?format=json');
     }
   }
