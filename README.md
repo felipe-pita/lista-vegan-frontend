@@ -38,11 +38,11 @@ Lista de marcas veganas do produto 5.
 Informações do produto 5.
 
 # Faltando
-Design
-Melhorar UI
-Nome
-Icone
-Popular banco de dados
+- Melhorar UI
+- Popular banco de dados
+- Nome
+- Icone
+
 
 # APK
 Note que o aplicativo está em fase inicial de desenvolvimento.
