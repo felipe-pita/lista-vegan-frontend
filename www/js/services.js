@@ -5,7 +5,7 @@ angular.module('starter.services', [])
   return {
     all: function() {
       return $http.get('http://veganize-kkteste.rhcloud.com/api/categoria?format=json');
-      // return $http.get('categoria.json');
+      // return $http.get('categoria.json'); //debug
     }
   };
   
@@ -15,7 +15,7 @@ angular.module('starter.services', [])
   return {
     get: function(id) {
       return $http.get('http://veganize-kkteste.rhcloud.com/categoria/' + id +'/?format=json');
-      // return $http.get('categoria3.json');
+      // return $http.get('categoria3.json'); //debug
     }
   }
 })
@@ -24,7 +24,7 @@ angular.module('starter.services', [])
   return {
     get: function(id) {
       return $http.get('http://veganize-kkteste.rhcloud.com/produto/' + id +'/?format=json');
-      // return $http.get('produto5.json');
+      // return $http.get('produto5.json'); //debug
     }
   }
 });
