@@ -10,7 +10,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ProdutoCtrl', function($scope, $stateParams, Produtos){
-  Produtos.all($stateParams.categoriaId).then(function(produtos){
+  Produtos.all($stateParams.categoriaId).then(function(produtos) {
     $scope.produtos = produtos.data;
   });
   
@@ -24,10 +24,12 @@ angular.module('starter.controllers', [])
   Marcas.all($stateParams.produtoId).then(function(marcas){
     $scope.marcas = marcas.data;
   });
+  
   Marcas.get($stateParams.produtoId).then(function(produto) {
     $scope.produtoSelecionado = produto.data;
   });
-})
+  
+});
 // mantido para referência posterior
 // .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
 //   $scope.chat = Chats.get($stateParams.chatId);
