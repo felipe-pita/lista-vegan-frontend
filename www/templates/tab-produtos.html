@@ -1,7 +1,7 @@
 <!--<ion-view view-title="{{categoriaSelecionada.descricao}}">-->
 <ion-view>
-  <ion-nav-title>
-    <span style="color:red">{{categoriaSelecionada.descricao}}</span>
+  <ion-nav-title class="assertive">
+    {{categoriaSelecionada.descricao}}
   </ion-nav-title>
   <ion-content>
     <ion-item class="item" ng-repeat="produto in produtos" href="#/tab/marcas/{{produto.id}}">
