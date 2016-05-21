@@ -37,9 +37,9 @@ O único caso de uso feito foi o "Ver Categorias", está faltando todo o restant
 # Screenshot
 ![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/categoria.png)
 
-![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/produtos.png)
+![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/produto.png)
 
-![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/marca.png)
+![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/marcas.png)
 
 # APK
 Note que o aplicativo não está funcional.
