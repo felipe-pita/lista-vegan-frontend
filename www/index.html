@@ -20,6 +20,7 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/angular-ui-router.js"></script>
   </head>
   <body ng-app="starter" ng-controller="categoriasCtrl">
 
@@ -29,9 +30,11 @@
         
       </ion-header-bar>
       <ion-content>
-        <div class="list card">
-          <div class ="item" ng-repeat="categoria in categorias">
-            {{categoria.descricao}}
+        <div ui-view>
+          <div ng-repeat="categoria in categorias" class="list card">
+            <a class ="item" ui-sref="#/categoria/{{categoria.id}}" >
+              {{categoria.descricao}}
+            </a>
           </div>
         </div>
       </ion-content>

@@ -20,17 +20,23 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script>
+    // ...and add 'ui.router' as a dependency
+    var myApp = angular.module('starter', ['ui.router']);
+  </script>
   </head>
-  <body ng-app="starter" ng-controller="categoriasCtrl">
+  <body ng-app="starter" ng-controller="produtosCtrl">
 
     <ion-pane>
       <ion-header-bar class="bar-balanced">
         <h1 class="title">Produtos</h1>
       </ion-header-bar>
       <ion-content>
-        <div class="list">
-          <div class ="item" ng-repeat="categoria in categorias">
-            {{categoria.descricao}}
+        <div ui-view>
+          <div  class="list" ng-repeat="produto in produtos">
+            <div class ="item" >
+              {{produto.descricao}}
+            </div>
           </div>
         </div>
       </ion-content>

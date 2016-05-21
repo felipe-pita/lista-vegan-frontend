@@ -19,9 +19,6 @@
   <preference name="SplashScreen" value="screen"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
-    <allow-navigation href="http://veganize-kkteste.rhcloud.com/*" />
-<access origin="*" />
-<allow-intent href="http://veganize-kkteste.rhcloud.com/*" />
   </feature>
   <platform name="android">
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
@@ -45,8 +42,5 @@
     <allow-navigation href="http://veganize-kkteste.rhcloud.com/*" />
   
   </platform>
-  <allow-navigation href="http://veganize-kkteste.rhcloud.com/*" />
-<access origin="*" />
-<allow-intent href="http://veganize-kkteste.rhcloud.com/*" />
   
 </widget>

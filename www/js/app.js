@@ -5,14 +5,31 @@
 // the 2nd parameter is an array of 'requires'
 (function() {
   
-  var app = angular.module('starter', ['ionic']);
+  var app = angular.module('starter', ['ionic', 'ui.router']);
 
   app.controller('categoriasCtrl', function($http, $scope){
     $scope.categorias = [];
-    
-    var url = 'http://veganize-kkteste.rhcloud.com/api/categoria?format=json';
+    var url = 'categoria.json';
+    // var url = 'http://veganize-kkteste.rhcloud.com/api/categoria?format=json';
     $http.get(url).success(function(data) {
         $scope.categorias = data;
+      });
+  });
+  
+  app.controller('produtosCtrl', function($http, $scope, $stateParams){
+    $scope.produtos = [];
+    var url = 'http://veganize-kkteste.rhcloud.com/categoria/' + $stateParams.categoriaId + '/?format=json';
+    $http.get(url).success(function(data) {
+      $scope.produtos = data;
+    });
+  });
+  
+  app.config(function($stateProvider) {
+    $stateProvider
+      .state("categoria.lista", {
+        url: '/categoria/{categoriaId}/',
+        templateUrl: 'categoria.html',
+        controller: 'produtosCtrl'
       });
   });
 
@@ -33,5 +50,4 @@
       }
     });
   });
-
 }());
