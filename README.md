@@ -35,7 +35,11 @@ Informações do produto 5.
 O único caso de uso feito foi o "Ver Categorias", está faltando todo o restante.
 
 # Screenshot
-![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/screenshot.png)
+![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/categoria.png)
+
+![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/produtos.png)
+
+![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/marca.png)
 
 # APK
 Note que o aplicativo não está funcional.
