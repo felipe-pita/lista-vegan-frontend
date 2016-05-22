@@ -4,7 +4,6 @@ angular.module('starter.controllers', [])
   Categorias.all().then(function(categorias){
     $scope.categorias = categorias.data;
   });
-  
 })
 
 .controller('ProdutoCtrl', function($scope, $stateParams, Produtos){
@@ -15,7 +14,6 @@ angular.module('starter.controllers', [])
   Produtos.getCategoria($stateParams.categoriaId).then(function(categoria) {
     $scope.categoriaSelecionada = categoria.data;
   });
-  
 })
 
 .controller('MarcaCtrl', function($scope, $stateParams, Marcas){
@@ -26,5 +24,4 @@ angular.module('starter.controllers', [])
   Marcas.getProduto($stateParams.produtoId).then(function(produto) {
     $scope.produtoSelecionado = produto.data;
   });
-  
 });
