@@ -2,13 +2,13 @@
   <ion-nav-title class="assertive">
     {{produtoSelecionado.descricao}}
   </ion-nav-title>
-    <ion-content>
-      {{produtoSelecionado.observacao}}
-      <ion-item class="card" ng-repeat="marca in marcas">
-          <ion-item class="item">
-            {{marca.marca.descricao}}
-            {{marca.observacao}}
-          </ion-item>
-      </ion-item>
+  <ion-content>
+    {{produtoSelecionado.observacao}}
+    <ion-item class="card" ng-repeat="marca in marcas">
+        <ion-item class="item">
+          {{marca.marca.descricao}}
+          {{marca.observacao}}
+        </ion-item>
+    </ion-item>
   </ion-content>
 </ion-view>
