@@ -1,0 +1,10 @@
+<ion-view>
+  <ion-nav-title class="assertive">
+    {{categoriaSelecionada.descricao}}
+  </ion-nav-title>
+  <ion-content>
+    <ion-item class="item" ng-repeat="produto in produtos" href="#/tab/marcas/{{produto.id}}">
+      {{produto.descricao}}
+    </ion-item>
+  </ion-content>
+</ion-view>
