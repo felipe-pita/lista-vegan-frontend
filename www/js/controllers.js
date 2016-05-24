@@ -43,10 +43,10 @@ angular.module('starter.controllers', [])
     var query = "INSERT INTO favorito (id, descricao) VALUES (?,?)";
     console.log(query);
     $cordovaSQLite.execute(db, query, [produto.id, produto.descricao]).then(function(res) {
-      console.log("INSERT ID -> " + res.insertId);
+      // console.log("INSERT ID -> " + res.insertId);
       
     }, function(err) {
-      console.error(err);
+      // console.error(err);
     });
   };
   
@@ -63,9 +63,9 @@ angular.module('starter.controllers', [])
         }
         // $scope.favoritos = JSON.stringify(itemsColl); 
         $scope.favoritos = itemsColl; 
-        console.log($scope.favoritos);
+        // console.log($scope.favoritos);
       } else {
-        console.log("Nenhum favorito.");
+        // console.log("Nenhum favorito.");
       }
     }, function(err) {
       console.error(err);
