@@ -3,8 +3,11 @@
     {{categoriaSelecionada.descricao}}
   </ion-nav-title>
   <ion-content>
-    <ion-item class="item" ng-repeat="produto in produtos" href="#/tab/marcas/{{produto.id}}">
-      {{produto.descricao}}
+    <ion-item class="card" ng-repeat="produto in produtos">
+      <ion-item class="item" href="#/tab/marcas/{{produto.id}}"> 
+        {{produto.descricao}} 
+      </ion-item>
+      <button class="button icon ion-star" ng-click="addFavorito(produto)"></button>
     </ion-item>
   </ion-content>
 </ion-view>

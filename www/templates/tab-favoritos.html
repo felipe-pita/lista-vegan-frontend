@@ -1,0 +1,13 @@
+<ion-view>
+  <ion-nav-title class="assertive">
+    Favoritos
+  </ion-nav-title>
+  <ion-content>
+    <ion-item class="card" ng-repeat="favorito in favoritos" >
+      <ion-item class="item" href="#/tab/marcas/{{favorito.id}}"> 
+        {{favorito.descricao}} 
+      </ion-item>
+      <button class="button icon ion-star" ng-click="removerFavorito(favorito.id)"></button>
+    </ion-item>
+  </ion-content>
+</ion-view>

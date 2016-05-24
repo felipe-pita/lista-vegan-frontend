@@ -5,10 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+var db = null;
+
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova'])
 
 // Para analisar
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $cordovaSQLite) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,6 +23,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    db = $cordovaSQLite.openDB("my.db");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS favorito (id integer primary key, descricao text)");
   });
 })
 
@@ -56,6 +60,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         'tab-produtos': {
           templateUrl: 'templates/tab-produtos.html',
           controller: 'ProdutoCtrl'
+        }
+      }
+    })
+    
+  .state('tab.favoritos', {
+      url: '/favoritos',
+      views: {
+        'tab-favoritos': {
+          templateUrl: 'templates/tab-favoritos.html',
+          controller: 'FavoritoCtrl'
         }
       }
     })
