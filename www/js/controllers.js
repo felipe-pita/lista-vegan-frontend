@@ -1,28 +1,5 @@
 angular.module('starter.controllers', [])
 
-/*
-.controller('FavoritoCtrl', function($scope, $cordovaSQLite) {
-  $scope.insert = function(idProduto) {
-    var query = "INSERT INTO favorito (idProduto) VALUES (?)";
-    $cordovaSQLite.execute(db, query [idProduto]).then(function(res) {
-      console.log("INSERT ID -> " + res.insertId);
-    }, function(err) {
-      console.error(err);
-    });
-  }
-  
-  var query = "SELECT idProduto FROM favorito";
-  $cordovaSQLite.execute(db, query).then(function(res) {
-    if(res.rows.length > 0) {
-      // console.log("SELECTED -> " + res.rows.item)
-    } else {
-      console.log("Nenhum favorito.");
-    }
-  }, function(err) {
-    console.error(err);
-  });
-})
-*/
 .controller('CategoriaCtrl', function($scope, Categorias) {
   Categorias.all().then(function(categorias){
     $scope.categorias = categorias.data;
@@ -61,11 +38,10 @@ angular.module('starter.controllers', [])
         for(var i = 0; i < res.rows.length; i++) {
           itemsColl[i] = res.rows.item(i);
         }
-        // $scope.favoritos = JSON.stringify(itemsColl); 
         $scope.favoritos = itemsColl; 
         // console.log($scope.favoritos);
       } else {
-        // console.log("Nenhum favorito.");
+        console.log("Nenhum favorito.");
       }
     }, function(err) {
       console.error(err);
