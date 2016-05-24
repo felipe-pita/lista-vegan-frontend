@@ -44,6 +44,7 @@ angular.module('starter.controllers', [])
     console.log(query);
     $cordovaSQLite.execute(db, query, [produto.id, produto.descricao]).then(function(res) {
       console.log("INSERT ID -> " + res.insertId);
+      
     }, function(err) {
       console.error(err);
     });
@@ -52,22 +53,26 @@ angular.module('starter.controllers', [])
 })
 
 .controller('FavoritoCtrl', function($scope, $cordovaSQLite) {
-  var query = "SELECT * FROM favorito ORDER BY descricao";
-  $cordovaSQLite.execute(db, query).then(function(res) {
-    if(res.rows.length > 0) {
-      var itemsColl = [];
-      for(var i = 0; i < res.rows.length; i++) {
-        itemsColl[i] = res.rows.item(i);
+  $scope.atualizar = function() {
+    var query = "SELECT * FROM favorito ORDER BY descricao";
+    $cordovaSQLite.execute(db, query).then(function(res) {
+      if(res.rows.length > 0) {
+        var itemsColl = [];
+        for(var i = 0; i < res.rows.length; i++) {
+          itemsColl[i] = res.rows.item(i);
+        }
+        // $scope.favoritos = JSON.stringify(itemsColl); 
+        $scope.favoritos = itemsColl; 
+        console.log($scope.favoritos);
+      } else {
+        console.log("Nenhum favorito.");
       }
-      // $scope.favoritos = JSON.stringify(itemsColl); 
-      $scope.favoritos = itemsColl; 
-      console.log($scope.favoritos);
-    } else {
-      console.log("Nenhum favorito.");
-    }
-  }, function(err) {
-    console.error(err);
-  });
+    }, function(err) {
+      console.error(err);
+    });
+  };
+  
+  $scope.atualizar();
   
   $scope.removerFavorito = function(id) {
     var query = "DELETE FROM favorito WHERE id = ?";
@@ -75,6 +80,7 @@ angular.module('starter.controllers', [])
     console.log(id);
     $cordovaSQLite.execute(db, query, [id]).then(function(res) {
       console.log("REMOVE ID -> " + res.insertId);
+      $scope.atualizar();
     }, function(err) {
       console.error(err);
     });

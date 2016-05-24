@@ -3,6 +3,7 @@
     Favoritos
   </ion-nav-title>
   <ion-content>
+    <button class="button icon ion-ios-refresh" ng-click="atualizar()"></button>
     <ion-item class="card" ng-repeat="favorito in favoritos" >
       <ion-item class="item" href="#/tab/marcas/{{favorito.id}}"> 
         {{favorito.descricao}} 
