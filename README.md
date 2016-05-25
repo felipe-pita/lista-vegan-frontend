@@ -12,6 +12,8 @@ Criado usando <a href="http://ionicframework.com/">Ionic Framwork</a>
 
 ![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/marcas.png)
 
+![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/favoritos.png)
+
 # Diagramas
 Clique na imagem para fazer o download do diagrama.
 
