@@ -1,6 +1,9 @@
-<ion-view view-title="Categorias" hide-nav-bar="true">
+<ion-view>
+  <ion-nav-title class="assertive">
+    Categorias
+  </ion-nav-title>
   <ion-content>
-    <ion-item class ="item" ng-repeat="categoria in categorias" href="#/tab/produtos/{{categoria.id}}" >
+    <ion-item class="item" ng-repeat="categoria in categorias" href="#/tab/produtos/{{categoria.id}}" >
       {{categoria.descricao}}
       {{categoria.observacao}}
     </ion-item>
