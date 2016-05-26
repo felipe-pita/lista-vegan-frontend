@@ -1,8 +1,15 @@
-<ion-view view-title="Produtos">
+<ion-view>
+  <ion-nav-title class="assertive">
+    {{categoriaSelecionada.descricao}}
+  </ion-nav-title>
   <ion-content>
-    <ion-item class="item" ng-repeat="produto in produtos" href="#/tab/marcas/{{produto.id}}">
-      {{produto.descricao}}
-      {{produto.observacao}}
-    </ion-item>
+    <div class="list list-inset">
+      <ion-item class="item item-button-right item-fav" ng-repeat="produto in produtos">
+        <ion-item class="item" href="#/tab/marcas/{{produto.id}}">
+          {{produto.descricao}}
+        </ion-item>        
+        <button class="button button-light" ng-click="addFavorito(produto)"><i class="icon ion-heart"></i></button>
+      </ion-item>
+    </div>
   </ion-content>
 </ion-view>

@@ -5,10 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+var db = null;
+
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova'])
 
 // Para analisar
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $cordovaSQLite) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,11 +23,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    db = $cordovaSQLite.openDB("my.db");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS favorito (id integer primary key, descricao text)");
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
-
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
@@ -40,7 +44,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   // Each tab has its own nav history stack:
-
   .state('tab.categoria', {
     url: '/categoria',
     views: {
@@ -60,16 +63,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    // referência posterior
-    // .state('tab.chat-detail', {
-    //   url: '/chats/:chatId',
-    //   views: {
-    //     'tab-chats': {
-    //       templateUrl: 'templates/chat-detail.html',
-    //       controller: 'ChatDetailCtrl'
-    //     }
-    //   }
-    // })
+    
+  .state('tab.favoritos', {
+      url: '/favoritos',
+      views: {
+        'tab-favoritos': {
+          templateUrl: 'templates/tab-favoritos.html',
+          controller: 'FavoritoCtrl'
+        }
+      }
+    })
 
   .state('tab.marcas', {
     url: '/marcas/:produtoId',

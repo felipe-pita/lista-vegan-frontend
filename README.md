@@ -12,13 +12,22 @@ Criado usando <a href="http://ionicframework.com/">Ionic Framwork</a>
 
 ![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/marcas.png)
 
+![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/favoritos.png)
+
 # Diagramas
 Clique na imagem para fazer o download do diagrama.
 
 #### Casos de Uso
 designed using <a href="http://astah.net/editions/community">Astah Community</a>
-<a href="https://github.com/rafaelnsantos/lista-vegan/raw/master/diagramas/casouso.asta">
-![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan/master/diagramas/casouso.png)
+<a href="https://github.com/rafaelnsantos/lista-vegan-frontend/raw/master/readme/casouso.asta">
+![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/casouso.png)
+</a>
+
+### Banco de Dados
+designed using <a href="https://www.mysql.com/products/workbench/">MySQL Workbench</a>
+
+<a href="https://github.com/rafaelnsantos/lista-vegan-frontend/raw/master/readme/banco.mwb">
+![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/banco.png)
 </a>
 
 # API
@@ -39,7 +48,6 @@ Informações do produto 5.
 
 # Faltando
 - Melhorar UI
-- Popular banco de dados
 - Nome
 - Icone
 

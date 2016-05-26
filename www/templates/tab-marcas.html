@@ -1,8 +1,17 @@
-<ion-view view-title="Relação">
+<ion-view>
+  <ion-nav-title class="assertive">
+    {{produtoSelecionado.descricao}}
+  </ion-nav-title>
+  <div class="bar-subheader">
+    {{produtoSelecionado.observacao}}
+  </div>
+
   <ion-content>
-    <ion-item class="item" ng-repeat="marca in marcas">
-      {{marca.marca.descricao}}
-      {{marca.observacao}}
-    </ion-item>
+    <div class="list list-inset">
+      <ion-item class="item" ng-repeat="marca in marcas">
+        {{marca.marca.descricao}}
+        {{marca.observacao}}
+      </ion-item>
+    </div>
   </ion-content>
 </ion-view>
