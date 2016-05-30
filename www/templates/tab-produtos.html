@@ -8,7 +8,11 @@
         <ion-item class="item" href="#/tab/marcas/{{produto.id}}">
           {{produto.descricao}}
         </ion-item>        
-        <button class="button button-light" ng-click="addFavorito(produto)"><i class="icon ion-heart"></i></button>
+        <!--<div ng-if="isFavorito(produto)">-->
+          <button class="button button-light" ng-click="addFavorito(produto)">
+            <i class="icon ion-heart"></i>
+          </button>
+        <!--</div>-->
       </ion-item>
     </div>
   </ion-content>
