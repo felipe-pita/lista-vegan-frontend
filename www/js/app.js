@@ -23,7 +23,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       // org.apache.cordova.statusbar required
       //StatusBar.styleDefault();
     // }
-    $cordovaStatusbar.styleHex('#33CB98');
+    $cordovaStatusbar.styleHex('#2A8365');
     db = $cordovaSQLite.openDB("my.db");
     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS favorito (id integer primary key, descricao text)");
   });
