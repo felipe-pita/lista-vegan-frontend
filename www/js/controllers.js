@@ -16,12 +16,22 @@ angular.module('starter.controllers', [])
     $scope.categoriaSelecionada = categoria.data;
   });
   
+  // $scope.isFavorito = function(produto) {
+  //   var query = "SELECT * FROM favorito WHERE id = ?";
+  //   $cordovaSQLite.execute(db, query, [produto.id]).then(function(res) {
+  //     if(res.rows.length > 0) {
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   });
+  // }
+  
   $scope.addFavorito = function(produto) {
     var query = "INSERT INTO favorito (id, descricao) VALUES (?,?)";
-    console.log(query);
+    // console.log(query);
     $cordovaSQLite.execute(db, query, [produto.id, produto.descricao]).then(function(res) {
       // console.log("INSERT ID -> " + res.insertId);
-      
     }, function(err) {
       // console.error(err);
     });
