@@ -33,49 +33,49 @@ $green: #33CB98;
 /* tabs */
 .tabs {
 	box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.09);
-}
 
 	.tab-item {
 		transition: color .2s ease;
-	}
 
-		.tab-item .icon {
+		.icon {
 			font-size: 22px;
 			height: 26px;
 			line-height: 26px;
 		}
+	}
+}
 
 
 /* list */
-.list {}
+.list {
 	
-	.list .item-fav {
+	.item-fav {
 		padding-top: 0;
 		padding-left: 0;
 		padding-bottom: 0;
-	}
-	
-	.list .item-fav > .item {
-		border: 0;
-	}
 
-	.list .item-fav .button {
-		color: #D4D4D4;
-		background-color: #ECECEC;
-	}
+		> .item {
+			border: 0;
+		}
 
-	.list .item-fav .button.activated {
-		color: #EF473A;
-		background-color: #FFECEC;
-		border-color: #FFECEC;
-	}
+		.button {
+			color: #D4D4D4;
+			background-color: #ECECEC;
+		}
 
-	.list .item-fav .button i {
-		transition: transform .1s ease;
-		transform: scale(1);
-	}
+		.button.activated {
+			color: #EF473A;
+			background-color: #FFECEC;
+			border-color: #FFECEC;
+		}
 
-	.list .item-fav .button.activated i {
-		transform: scale(1.2);
-	}
+		.button i {
+			transition: transform .1s ease;
+			transform: scale(1);
+		}
 
+		.button.activated i {
+			transform: scale(1.2);
+		}
+	}
+}
