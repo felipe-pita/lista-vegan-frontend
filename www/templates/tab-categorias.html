@@ -3,8 +3,8 @@
     Categorias
   </ion-nav-title>
   <ion-content>
-    <div class="list list-inset">
-      <ion-item class="item" ng-repeat="categoria in categorias" href="#/tab/produtos/{{categoria.id}}" >
+    <div class="row" style="flex-wrap: wrap;">
+      <ion-item class="col col-33" ng-repeat="categoria in categorias" href="#/tab/produtos/{{categoria.id}}" >
         {{categoria.descricao}}
         {{categoria.observacao}}
       </ion-item>
