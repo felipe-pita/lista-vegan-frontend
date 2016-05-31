@@ -48,7 +48,6 @@ Informações do produto 5.
 
 # Faltando
 - Melhorar UI
-- Nome
 - Icone
 
 

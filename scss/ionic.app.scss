@@ -15,11 +15,67 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
-$balanced:                        #33CB98 !default;
-
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+
+/* Customização */
+$green: #33CB98;
+
+/* content */
+.view-container, .scroll-content {
+	background-color: #f0f0f0;
+}
+
+/* tabs */
+.tabs {
+	box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.09);
+
+	.tab-item {
+		transition: color .2s ease;
+
+		.icon {
+			font-size: 22px;
+			height: 26px;
+			line-height: 26px;
+		}
+	}
+}
+
+
+/* list */
+.list {
+	
+	.item-fav {
+		padding-top: 0;
+		padding-left: 0;
+		padding-bottom: 0;
+
+		> .item {
+			border: 0;
+		}
+
+		.button {
+			color: #D4D4D4;
+			background-color: #ECECEC;
+		}
+
+		.button.activated {
+			color: #EF473A;
+			background-color: #FFECEC;
+			border-color: #FFECEC;
+		}
+
+		.button i {
+			transition: transform .1s ease;
+			transform: scale(1);
+		}
+
+		.button.activated i {
+			transform: scale(1.2);
+		}
+	}
+}
