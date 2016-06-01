@@ -1,0 +1,19 @@
+<ion-view>
+  <ion-nav-title class="balanced">
+    <button class="icon ion-home" ui-sref="tab.categoria"> </button>
+    {{produtoSelecionado.descricao}}
+    <!--<button class="icon ion-search" ui-sref=""> </button>-->
+    <button class="icon ion-heart" ui-sref="tab.favoritos"> </button>
+  </ion-nav-title>
+  <div class="bar-subheader">
+    {{produtoSelecionado.observacao}}
+  </div>
+
+  <ion-content>
+    <div class="list list-inset">
+      <ion-item class="item" ng-repeat="marca in marcas track by $index">
+        {{marca.descricao}}
+      </ion-item>
+    </div>
+  </ion-content>
+</ion-view>
