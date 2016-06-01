@@ -25,7 +25,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     // }
     $cordovaStatusbar.styleHex('#2A8365');
     db = $cordovaSQLite.openDB("my.db");
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS favorito (id integer primary key, descricao text)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS favorito (id integer primary key, descricao text, observacao text)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS marca (id integer primary key, descricao text, observacao text)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS relacao(idFavorito integer, idMarca integer, observacao text, PRIMARY KEY(idFavorito, idMarca))");
   });
 })
 
@@ -56,24 +58,34 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   })
 
   .state('tab.produtos', {
-      url: '/produtos/:categoriaId',
-      views: {
-        'tab-produtos': {
-          templateUrl: 'templates/tab-produtos.html',
-          controller: 'ProdutoCtrl'
-        }
+    url: '/produtos/:categoriaId',
+    views: {
+      'tab-produtos': {
+        templateUrl: 'templates/tab-produtos.html',
+        controller: 'ProdutoCtrl'
       }
-    })
+    }
+  })
     
   .state('tab.favoritos', {
-      url: '/favoritos',
-      views: {
-        'tab-favoritos': {
-          templateUrl: 'templates/tab-favoritos.html',
-          controller: 'FavoritoCtrl'
-        }
+    url: '/favoritos',
+    views: {
+      'tab-favoritos': {
+        templateUrl: 'templates/tab-favoritos.html',
+        controller: 'FavoritoCtrl'
       }
-    })
+    }
+  })
+    
+  .state('tab.marcasoff', {
+    url: '/marcasoff/:produtoId',
+    views: {
+      'tab-marcasoff': {
+        templateUrl: 'templates/tab-marcasoff.html',
+        controller: 'MarcaOffCtrl'
+      }
+    }
+  })
 
   .state('tab.marcas', {
     url: '/marcas/:produtoId',
