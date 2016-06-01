@@ -10,7 +10,7 @@
       {{produtoSelecionado.observacao}}
     </div>
     <div class="list list-inset">
-      <ion-item class="item" ng-repeat="marca in marcas track by (marca.id + $index)">
+      <ion-item class="item" ng-repeat="marca in marcas track by $index">
         {{marca.descricao}}<br><!--todos as tuplas estão aparecendo na ultima linha da lista-->
         {{marca.observacao}}
       </ion-item>
