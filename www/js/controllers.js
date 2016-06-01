@@ -109,14 +109,15 @@ angular.module('starter.controllers', [])
   var query = "SELECT * FROM relacao WHERE idFavorito = ?";
   console.log(query + $stateParams.produtoId);
   $cordovaSQLite.execute(db, query, [$stateParams.produtoId]).then(function(res) {
-    var lista = [];
+    
     if(res.rows.length > 0) {
       var itemsColl = [];
       for(var i = 0; i < res.rows.length; i++) {
         itemsColl[i] = res.rows.item(i);
         console.log(itemsColl[i].toString());
       }
-      var aux = itemsColl;        
+      var aux = itemsColl;
+      var lista = [];    
       for(var i = 0; i < aux.length; i++){
         var query = "SELECT * FROM marca WHERE id = ?";
         console.log(query + aux[i].idMarca);
