@@ -5,11 +5,10 @@
     <!--<button class="icon ion-search" ui-sref=""> </button>-->
     <button class="icon ion-heart" ui-sref="tab.favoritos"> </button>
   </ion-nav-title>
-  <div class="bar-subheader">
-    {{produtoSelecionado.observacao}}
-  </div>
-
   <ion-content>
+    <div class="bar-subheader">
+      {{produtoSelecionado.observacao}} <!--não está aparecendo na tela-->
+    </div>
     <div class="list list-inset">
       <ion-item class="item" ng-repeat="marca in marcas">
         {{marca.marca.descricao}}
