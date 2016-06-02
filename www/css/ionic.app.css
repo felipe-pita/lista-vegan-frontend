@@ -9837,7 +9837,24 @@ a.button {
   padding: 0; }
   .categoria-list .item {
     margin: 0;
+    padding: 0;
     border: 1px solid #fff;
     background-color: #f1f1f1; }
     .categoria-list .item a {
-      background: none; }
+      display: block;
+      width: 100%;
+      padding: 5px 5px 10px;
+      background: none;
+      text-align: center;
+      text-decoration: none;
+      white-space: normal;
+      line-height: 1.1em;
+      font-size: 0.9em;
+      color: #7e7e7e;
+      font-weight: 600; }
+      .categoria-list .item a::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 80px;
+        color: #5e8c7d; }
