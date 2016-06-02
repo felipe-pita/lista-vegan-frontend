@@ -1,13 +1,13 @@
 <ion-view>
-  <ion-nav-title class="balanced">
-    <button class="icon ion-home" ui-sref="tab.categoria"> </button>
-    {{produtoSelecionado.descricao}}
-    <!--<button class="icon ion-search" ui-sref=""> </button>-->
-    <button class="icon ion-heart" ui-sref="tab.favoritos"> </button>
+  <ion-nav-title>
+    <div class="icon ion-home" ui-sref="tab.categoria"></div>
+    <div class="bar-header-title">{{produtoSelecionado.descricao}}</div>
+    <div class="icon ion-search" ui-sref=""></div>
+    <div class="icon ion-heart fav" ui-sref="tab.favoritos"></div>
   </ion-nav-title>
   <ion-content>
     <div class="bar-subheader">
-      {{produtoSelecionado.observacao}}
+      Observação: {{produtoSelecionado.observacao}}
     </div>
     <div class="list list-inset">
       <ion-item class="item" ng-repeat="marca in marcas">
