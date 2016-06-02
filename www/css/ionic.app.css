@@ -1,20 +1,6 @@
 @charset "UTF-8";
-/*
-To customize the look and feel of Ionic, you can override the variables
-in ionic's _variables.scss file.
-
-For example, you might change some of the default colors:
-
-$light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
-$calm:                            #11c1f3 !default;
-$balanced:                        #33CB98 !default;
-$energized:                       #ffc900 !default;
-$assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
-$dark:                            #444 !default;
-*/
+/* The path for our ionicons font files, relative to the built CSS in www/css */
+/* Include all of Ionic */
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -9815,37 +9801,60 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-/* Customização */
-/* content */
-.view-container, .scroll-content {
-  background-color: #f0f0f0; }
+/* vars */
+/* main-header */
+.bar-header {
+  background-color: #31ca98;
+  height: 60px !important;
+  padding: 0; }
+  .bar-header .title {
+    line-height: 60px !important;
+    height: auto; }
+  .bar-header .nav-bar-title {
+    display: flex; }
+    .bar-header .nav-bar-title .bar-header-title {
+      width: 100%;
+      font-weight: 600;
+      color: #fff;
+      text-align: center; }
+      .bar-header .nav-bar-title .bar-header-title.home {
+        text-align: left; }
+    .bar-header .nav-bar-title .icon {
+      flex-shrink: 0;
+      font-size: 30px;
+      color: #fff;
+      padding: 0 6px; }
+      .bar-header .nav-bar-title .icon.fav {
+        color: #fddf68; }
 
-/* tabs */
-.tabs {
-  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.09); }
-  .tabs .tab-item {
-    transition: color .2s ease; }
-    .tabs .tab-item .icon {
-      font-size: 22px;
-      height: 26px;
-      line-height: 26px; }
+/* viewer */
+.has-header {
+  top: 60px !important; }
 
-/* list */
-.list .item-fav {
-  padding-top: 0;
-  padding-left: 0;
-  padding-bottom: 0; }
-  .list .item-fav > .item {
-    border: 0; }
-  .list .item-fav .button {
-    color: #D4D4D4;
-    background-color: #ECECEC; }
-  .list .item-fav .button.activated {
-    color: #EF473A;
-    background-color: #FFECEC;
-    border-color: #FFECEC; }
-  .list .item-fav .button i {
-    transition: transform .1s ease;
-    transform: scale(1); }
-  .list .item-fav .button.activated i {
-    transform: scale(1.2); }
+/* categorias */
+.categoria-list {
+  flex-wrap: wrap;
+  padding: 0; }
+  .categoria-list .item {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #fff;
+    background-color: #f1f1f1; }
+    .categoria-list .item a {
+      display: block;
+      width: 100%;
+      padding: 5px 5px 10px;
+      background: none;
+      text-align: center;
+      text-decoration: none;
+      white-space: normal;
+      line-height: 1.1em;
+      font-size: 0.9em;
+      color: #7e7e7e;
+      font-weight: 600; }
+      .categoria-list .item a::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 80px;
+        color: #5e8c7d; }

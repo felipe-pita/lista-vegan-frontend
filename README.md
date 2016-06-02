@@ -49,6 +49,7 @@ Informações do produto 5.
 # Faltando
 - Melhorar UI
 - Icone
+- Icones das categorias (gerar fonticon)
 
 
 # APK
