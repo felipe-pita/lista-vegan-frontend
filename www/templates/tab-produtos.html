@@ -1,12 +1,13 @@
 <ion-view>
   <ion-nav-title>
     <div class="icon ion-home" ui-sref="tab.categoria"></div>
-    <div class="bar-header-title">{{categoriaSelecionada.descricao}}</div>
+    <div class="bar-header-title">Lista Vegana</div>
     <div class="icon ion-search" ui-sref=""></div>
     <div class="icon ion-heart fav" ui-sref="tab.favoritos"></div>
   </ion-nav-title>
   <ion-content>
     <div class="list list-inset">
+      {{categoriaSelecionada.descricao}}
       <ion-item class="item item-button-right item-fav" ng-repeat="produto in produtos">
         <ion-item class="item" href="#/tab/marcas/{{produto.id}}">
           {{produto.descricao}}
