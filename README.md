@@ -6,13 +6,10 @@ Criado usando <a href="http://ionicframework.com/">Ionic Framwork</a>
 <a href="https://github.com/rafaelnsantos/lista-vegan">Página do backend</a>.
 
 # Screenshots
-![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/categoria.png)
 
-![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/produto.png)
-
-![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/marcas.png)
-
-![alt tag](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/favoritos.png)
+| Categoria | Produtos | Marcas | Favoritos |
+| --------- | -------- | ------ | --------- |
+| ![Categoria](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/categoria.png) | ![Produtos](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/produto.png) | ![Marcas](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/marcas.png)  | ![Favorito](https://raw.githubusercontent.com/rafaelnsantos/lista-vegan-frontend/master/readme/favoritos.png) |
 
 # Diagramas
 Clique na imagem para fazer o download do diagrama.
