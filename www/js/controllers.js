@@ -24,18 +24,17 @@ angular.module('starter.controllers', [])
   $scope.addFavorito = function(produto) {
     MarcasOff.addFavorito(produto);
     Marcas.all(produto.id).then(function(marcas){
-    var marca = marcas.data;
-    for(var i = 0; i < marca.length; i++){
-      MarcasOff.addMarca(marca[i]);
-      MarcasOff.addRelacao([produto.id, marca[i].marca.id, marca[i].observacao]);
-    }
-  });
+      var marca = marcas.data;
+      for(var i = 0; i < marca.length; i++){
+        MarcasOff.addMarca(marca[i]);
+        MarcasOff.addRelacao([produto.id, marca[i].marca.id, marca[i].observacao]);
+      }
+    });
+  };
   
   $scope.removerFavorito = function(id) {
     Favoritos.remover(id);
     $scope.atualizar();
-  };
-    
   };
   
 })
