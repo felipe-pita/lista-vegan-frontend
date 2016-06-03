@@ -69,6 +69,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     
   .state('tab.favoritos', {
     url: '/favoritos',
+    cache: false,
     views: {
       'tab-favoritos': {
         templateUrl: 'templates/tab-favoritos.html',
