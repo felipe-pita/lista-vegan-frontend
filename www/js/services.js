@@ -92,6 +92,20 @@ angular.module('starter.services', [])
       return DBA.query("SELECT * FROM favorito WHERE id = ?", parameters).then(function(result) {
         return DBA.getById(result);
       });
+    },
+    
+    addMarca: function(marca) {
+      var parameters = [marca.marca.id, marca.marca.descricao, marca.observacao];
+      return DBA.query("INSERT INTO marca (id, descricao, observacao) VALUES (?, ?, ?)", parameters);
+    },
+    
+    addRelacao: function(parameters) {
+      return DBA.query("INSERT INTO relacao (idFavorito, idMarca, observacao) VALUES (?, ?, ?)", parameters);
+    },
+    
+    addFavorito: function(produto) {
+      var parameters = [produto.id, produto.descricao, produto.observacao];
+      return DBA.query("INSERT INTO favorito (id, descricao, observacao) VALUES (?, ?, ?)", parameters);
     }
   }
 })

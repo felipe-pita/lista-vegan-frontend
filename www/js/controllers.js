@@ -7,7 +7,7 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('ProdutoCtrl', function($scope, $cordovaSQLite, $stateParams, Produtos) {
+.controller('ProdutoCtrl', function($scope, $stateParams, Produtos, Marcas, MarcasOff) {
   Produtos.all($stateParams.categoriaId).then(function(produtos) {
     $scope.produtos = produtos.data;
   });
@@ -28,39 +28,12 @@ angular.module('starter.controllers', [])
   // }
   
   $scope.addFavorito = function(produto) {
-    var query = "INSERT INTO favorito (id, descricao, observacao) VALUES (?, ?, ?)";
-    // console.log(query);
-    $cordovaSQLite.execute(db, query, [produto.id, produto.descricao, produto.observacao]).then(function(res) {
-      console.log("INSERT ID -> " + res.insertId);
-
-    }, function(err) {
-      // console.error(err);
-    });
-    
+    MarcasOff.addFavorito(produto);
     Marcas.all(produto.id).then(function(marcas){
     var marca = marcas.data;
-    // for(var marca in marcas){
     for(var i = 0; i < marca.length; i++){
-      var query = "INSERT INTO marca (id, descricao, observacao) VALUES (?, ?, ?)";
-      console.log(query + marca[i].marca.id + marca[i].marca.descricao, marca[i].observacao);
-      $cordovaSQLite.execute(db, query, [marca[i].marca.id, marca[i].marca.descricao, marca[i].observacao]).then(function(res) {
-        
-      }, function(err) {
-        
-      });
-      var query = "INSERT INTO relacao (idFavorito, idMarca, observacao) VALUES (?, ?, ?)";
-      console.log(query + produto.id + marca[i].marca.id + marca[i].observacao);
-      
-      var observacao;
-      Marcas.getProduto(produto.id).then(function(produto) {
-        observacao = produto.data.observacao;
-      });
-      $cordovaSQLite.execute(db, query, [produto.id, marca[i].marca.id, observacao]).then(function(res) {
-          
-      }, function(err) {
-        
-      });  
-      
+      MarcasOff.addMarca(marca[i]);
+      MarcasOff.addRelacao([produto.id, marca[i].marca.id, marca[i].observacao]);
     }
   });
     
