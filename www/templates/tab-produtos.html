@@ -12,7 +12,7 @@
         <ion-item class="item" href="#/tab/marcas/{{produto.id}}">
           {{produto.descricao}}
         </ion-item>        
-        <!--<div ng-if="isFavorito(produto)">-->
+        <!--<div ng-if="!isFavorito(produto.id)">-->
           <button class="button button-light" ng-click="addFavorito(produto)">
             <i class="icon ion-heart"></i>
           </button>

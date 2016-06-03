@@ -75,6 +75,18 @@ angular.module('starter.services', [])
       var parameters = [favoritoId];
       return DBA.query("DELETE FROM favorito WHERE id = ?", parameters);
     }
+    
+    // isFavorito: function(produtoId) {
+    //   var parameters = [produtoId];
+    //   return DBA.query("SELECT * FROM favorito WHERE id = ?", parameters).then(function(result) {
+    //     if(DBA.getById(result) == null){
+    //       return false;
+    //     } else {
+    //       return true;
+    //     }
+    //   });
+      
+    // }
   }
 })
 

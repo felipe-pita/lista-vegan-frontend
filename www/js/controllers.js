@@ -7,7 +7,7 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('ProdutoCtrl', function($scope, $stateParams, Produtos, Marcas, MarcasOff) {
+.controller('ProdutoCtrl', function($scope, $stateParams, Produtos, Marcas, MarcasOff, Favoritos) {
   Produtos.all($stateParams.categoriaId).then(function(produtos) {
     $scope.produtos = produtos.data;
   });
@@ -16,15 +16,9 @@ angular.module('starter.controllers', [])
     $scope.categoriaSelecionada = categoria.data;
   });
   
-  // $scope.isFavorito = function(produto) {
-  //   var query = "SELECT * FROM favorito WHERE id = ?";
-  //   $cordovaSQLite.execute(db, query, [produto.id]).then(function(res) {
-  //     if(res.rows.length > 0) {
-  //       return true;
-  //     } else {
-  //       return false;
-  //     }
-  //   });
+  // $scope.isFavorito = function(produtoId) {
+  //   console.log(Favoritos.isFavorito(produtoId));
+  //   return Favoritos.isFavorito(produtoId);
   // }
   
   $scope.addFavorito = function(produto) {
