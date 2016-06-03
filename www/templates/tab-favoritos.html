@@ -1,13 +1,13 @@
 <ion-view>
   <ion-nav-title class="balanced">
     <div class="icon ion-home" ui-sref="tab.categoria"> </div>
-    Favoritos
-    <!--<button class="icon ion-search" ui-sref=""> </button>-->
+    <div class="bar-header-title">Lista Vegana</div>
+    <div class="icon ion-search"></div>
     <!--<button class="icon ion-heart" ui-sref="tab.favoritos"> </button>-->
   </ion-nav-title>
   <ion-content>
     <button class="button icon ion-ios-refresh" ng-click="atualizar()"></button>
-    <div class="list list-inset">
+    <div class="list list-inset" >
       <ion-item class="item item-button-right item-fav" ng-repeat="favorito in favoritos" >
         <ion-item class="item" href="#/tab/marcasoff/{{favorito.id}}"> 
           {{favorito.descricao}} 
