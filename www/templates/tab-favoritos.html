@@ -9,7 +9,7 @@
     <button class="button icon ion-ios-refresh" ng-click="atualizar()"></button>
     <div class="list list-inset">
       <ion-item class="item item-button-right item-fav" ng-repeat="favorito in favoritos" >
-        <ion-item class="item" href="#/tab/marcas/{{favorito.id}}"> 
+        <ion-item class="item" href="#/tab/marcasoff/{{favorito.id}}"> 
           {{favorito.descricao}} 
         </ion-item>
         <button class="button button-light" ng-click="removerFavorito(favorito.id)"><i class="icon ion-minus-circled"></i></button>
