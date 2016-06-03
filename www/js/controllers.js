@@ -16,10 +16,10 @@ angular.module('starter.controllers', [])
     $scope.categoriaSelecionada = categoria.data;
   });
   
-  // $scope.isFavorito = function(produtoId) {
-  //   console.log(Favoritos.isFavorito(produtoId));
-  //   return Favoritos.isFavorito(produtoId);
-  // }
+  $scope.isFavorito = function(produtoId) {
+    console.log(Favoritos.isFavorito(produtoId));
+    return Favoritos.isFavorito(produtoId);
+  }
   
   $scope.addFavorito = function(produto) {
     MarcasOff.addFavorito(produto);
@@ -30,6 +30,11 @@ angular.module('starter.controllers', [])
       MarcasOff.addRelacao([produto.id, marca[i].marca.id, marca[i].observacao]);
     }
   });
+  
+  $scope.removerFavorito = function(id) {
+    Favoritos.remover(id);
+    $scope.atualizar();
+  };
     
   };
   

@@ -74,19 +74,19 @@ angular.module('starter.services', [])
     remover: function(favoritoId) {
       var parameters = [favoritoId];
       return DBA.query("DELETE FROM favorito WHERE id = ?", parameters);
-    }
+    },
     
-    // isFavorito: function(produtoId) {
-    //   var parameters = [produtoId];
-    //   return DBA.query("SELECT * FROM favorito WHERE id = ?", parameters).then(function(result) {
-    //     if(DBA.getById(result) == null){
-    //       return false;
-    //     } else {
-    //       return true;
-    //     }
-    //   });
+    isFavorito: function(produtoId) {
+      var parameters = [produtoId];
+      return DBA.query("SELECT * FROM favorito WHERE id = ?", parameters).then(function(result) {
+        if(DBA.getById(result) == null){
+          return false;
+        } else {
+          return true;
+        }
+      });
       
-    // }
+    }
   }
 })
 
