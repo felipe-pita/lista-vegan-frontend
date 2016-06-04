@@ -9839,7 +9839,9 @@ a.button {
     margin: 0;
     padding: 0;
     border: 1px solid #fff;
-    background-color: #f1f1f1; }
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: flex-end; }
     .categoria-list .item a {
       display: block;
       width: 100%;
@@ -9852,9 +9854,14 @@ a.button {
       font-size: 0.9em;
       color: #7e7e7e;
       font-weight: 600; }
-      .categoria-list .item a::before {
-        content: '';
+    .categoria-list .item .icon {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 25%; }
+      .categoria-list .item .icon img {
         display: block;
         width: 100%;
-        height: 80px;
-        color: #5e8c7d; }
+        height: auto; }
+    .categoria-list .item .desc {
+      display: block; }

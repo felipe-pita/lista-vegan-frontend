@@ -65,6 +65,8 @@ $fav-icon-color: #fddf68;
 		padding: 0;
 		border: 1px solid #fff;
 		background-color: #f1f1f1;
+		display: flex;
+		align-items: flex-end;
 
 		a {
 			display: block;
@@ -78,14 +80,23 @@ $fav-icon-color: #fddf68;
 			font-size: 0.9em;
 			color: #7e7e7e;
 			font-weight: 600;
+		}
 
-			&::before {
-				content: '';
+		.icon {
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: 25%;
+
+			img {
 				display: block;
 				width: 100%;
-				height: 80px;
-				color: #5e8c7d;
+				height: auto;
 			}
+		}
+
+		.desc {
+			display: block;
 		}
 	}
 }
