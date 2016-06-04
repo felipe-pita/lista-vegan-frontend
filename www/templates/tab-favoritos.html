@@ -6,6 +6,7 @@
     <!--<button class="icon ion-heart" ui-sref="tab.favoritos"> </button>-->
   </ion-nav-title>
   <ion-content>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="update()"> </ion-refresher>
     <!--<button class="button icon ion-ios-refresh" ng-click="atualizar()"></button>-->
     Favoritos
     <div class="list list-inset" >
