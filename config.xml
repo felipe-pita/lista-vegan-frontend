@@ -8,8 +8,7 @@
     Your Name Here&#xD;&#xD;
   </author>
   <content src="index.html"/>
-  <access origin="*"/>
-  <allow-navigation href="http://veganize-kkteste.rhcloud.com/*"/>
+  <access origin="http://veganize-kkteste.rhcloud.com"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
