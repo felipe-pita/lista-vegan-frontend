@@ -80,6 +80,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     
   .state('tab.marcasoff', {
     url: '/marcasoff/:produtoId',
+    cache: false,
     views: {
       'tab-marcasoff': {
         templateUrl: 'templates/tab-marcasoff.html',
