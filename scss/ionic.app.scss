@@ -9,8 +9,13 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 $main-header-height: 60px !important;
 $main-header-color:  #31ca98;
 
-$fav-icon-color: #fddf68;
+$fav-icon-on: #fddf68;
+$fav-icon-off: #dbdbdb;
 
+$list-title: #2a8364;
+$list-note: #2b2b2b;
+$list-item: #7c7c7c;
+$list-border: #d1e9e1;
 
 /* main-header */
 .bar-header {
@@ -44,7 +49,7 @@ $fav-icon-color: #fddf68;
 			padding: 0 6px;
 
 			&.fav {
-				color: $fav-icon-color;
+				color: $fav-icon-on;
 			}
 		}
 	}
@@ -98,5 +103,83 @@ $fav-icon-color: #fddf68;
 		.desc {
 			display: block;
 		}
+	}
+}
+
+
+/* listas */
+.list {
+	margin: 15px 30px;
+
+	.list-title {
+		margin-bottom: 10px;
+		font-size: 18px;
+		font-weight: 600;
+		color: $list-title;
+	}
+
+	.list-note {
+		font-size: 14px;
+		color: $list-note;
+		margin-bottom: 20px;
+	}
+
+	.list-label {
+		font-size: 14px;
+		color: $list-title;
+		border-bottom: 1px solid $list-border;
+		font-weight: 600;
+		padding-bottom: 10px;
+	}
+
+	&:last-child { margin-bottom: 20px; }
+
+	.item {
+		font-size: 16px;
+		color: $list-item;
+		padding: 0;
+		border: 0;
+		border-bottom: 1px solid $list-border;
+		margin: 0;
+
+		.name {
+			display: block;
+			padding: 10px 0;
+			text-decoration: none;
+			color: inherit;
+
+			em {
+				font-style: italic;
+				font-size: 0.9em;
+			}
+
+			&.activated {
+				color: $list-title;
+			}
+		}
+
+		.button {
+			position: absolute;
+			border: 0;
+			top: 0;
+			right: 0;
+			background: none;
+			min-width: 0;
+			min-height: 0;
+			height: 100%;
+			padding: 10px 0 10px 14px;
+			color: $fav-icon-off;
+
+			&.activated {
+				color: $fav-icon-on;
+			}
+
+			&::before {
+				font-size: 20px;
+				line-height: 18px;
+			}
+		}
+
+		&:last-child { border-bottom: 0; }
 	}
 }

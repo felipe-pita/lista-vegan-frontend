@@ -8,7 +8,7 @@
     <div class="row categoria-list">
       <ion-item class="col col-33" ng-repeat="categoria in categorias">
         <a href="#/tab/produtos/{{categoria.id}}">
-          <span class="icon"><img src="../icons/{{categoria.descricao | slugify}}.svg" alt=""></span>
+          <span class="icon"><img src="icons/{{categoria.descricao | slugify}}.svg" alt=""></span>
           <span class="desc">{{categoria.descricao}}</span>
         </a>
         <!--{{categoria.observacao}}-->

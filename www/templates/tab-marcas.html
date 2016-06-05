@@ -6,15 +6,20 @@
     <div class="icon ion-heart fav" ui-sref="tab.favoritos"></div>
   </ion-nav-title>
   <ion-content>
-    {{produtoSelecionado.descricao}}
-    <div class="bar-subheader">
-      Observação: {{produtoSelecionado.observacao}}
-    </div>
-    <div class="list list-inset">
-      <ion-item class="item" ng-repeat="marca in marcas">
-        {{marca.marca.descricao}}
-        {{marca.observacao}}
-      </ion-item>
+    <div class="list">
+      <div class="list-title">{{produtoSelecionado.descricao}}</div>
+      <div class="list-note">
+        <p>{{produtoSelecionado.observacao}} Lorem ipsum dolor sit a excepturi error iste, tenetur debitis qui <strong>veniam beatae maiores</strong>.</p>
+      </div>
+      <div class="list-label">Marcas</div>
+      <ul>
+        <li ng-repeat="marca in marcas" class="item">
+          <span class="name">
+            {{marca.marca.descricao}}<br>
+            <em>{{marca.observacao}}</em>
+          </span>
+        </li>
+      </ul>
     </div>
   </ion-content>
 </ion-view>

@@ -8,14 +8,24 @@
   <ion-content>
     <ion-refresher pulling-text="Pull to refresh..." on-refresh="update()"> </ion-refresher>
     <!--<button class="button icon ion-ios-refresh" ng-click="atualizar()"></button>-->
-    Favoritos
-    <div class="list list-inset" >
-      <ion-item class="item item-button-right item-fav" ng-repeat="favorito in favoritos" >
-        <ion-item class="item" href="#/tab/marcasoff/{{favorito.id}}"> 
-          {{favorito.descricao}} 
-        </ion-item>
-        <button class="button button-light" ng-click="removerFavorito(favorito.id)"><i class="icon ion-minus-circled"></i></button>
-      </ion-item>
+    <div class="list">
+      <div class="list-title">Favoritos</div>
+      <ul>
+        <li ng-repeat="favorito in favoritos" class="item">
+          <a href="#/tab/marcasoff/{{favorito.id}}" class="name">{{favorito.descricao}}</a>
+          <!--<div ng-if="isFavorito(produto.id) == false">-->
+          <button class="button icon ion-heart" ng-click="removerFavorito(favorito.id)"></button>
+          <!--</div>-->
+          
+          <!--<div ng-if="isFavorito(produto.id)">>
+            <button class="button button-light" ng-click="removerFavorito(produto.id)">
+              <i class="icon ion-minus-circled"></i>
+            </button>
+          </div>-->
+        </li>
+      </ul>
     </div>
   </ion-content>
+
+
 </ion-view>

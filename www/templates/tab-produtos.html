@@ -6,26 +6,22 @@
     <div class="icon ion-heart fav" ui-sref="tab.favoritos"></div>
   </ion-nav-title>
   <ion-content>
-    
-    {{categoriaSelecionada.descricao}}
-    <div class="list list-inset">
-      <ion-item class="item item-button-right item-fav" ng-repeat="produto in produtos">
-        <ion-item class="item" href="#/tab/marcas/{{produto.id}}">
-          {{produto.descricao}}
-        </ion-item>        
-        <!--<div ng-if="isFavorito(produto.id) == false">-->
-          <button class="button button-light" ng-click="addFavorito(produto)">
-            <i class="icon ion-heart"></i>
-          </button>
-        <!--</div>-->
-        
-        <!--<div ng-if="isFavorito(produto.id)">>
-          <button class="button button-light" ng-click="removerFavorito(produto.id)">
-            <i class="icon ion-minus-circled"></i>
-          </button>
-        </div>-->
-        
-      </ion-item>
+    <div class="list">
+      <div class="list-title">{{categoriaSelecionada.descricao}}</div>
+      <ul>
+        <li ng-repeat="produto in produtos" class="item">
+          <a href="#/tab/marcas/{{produto.id}}" class="name">{{produto.descricao}}</a>
+          <!--<div ng-if="isFavorito(produto.id) == false">-->
+          <button class="button icon ion-heart" ng-click="addFavorito(produto)"></button>
+          <!--</div>-->
+          
+          <!--<div ng-if="isFavorito(produto.id)">>
+            <button class="button button-light" ng-click="removerFavorito(produto.id)">
+              <i class="icon ion-minus-circled"></i>
+            </button>
+          </div>-->
+        </li>
+      </ul>
     </div>
   </ion-content>
 </ion-view>
